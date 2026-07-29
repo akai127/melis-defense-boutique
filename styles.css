@@ -1160,3 +1160,32 @@ body.drawer-is-open { overflow: hidden; }
 @media (max-width: 720px) {
   .policy { padding: 24px 20px 28px; }
 }
+
+/* ---------- founder photo ---------- */
+.portrait.portrait-photo {
+  padding: 0;
+  overflow: hidden;
+  place-content: stretch;
+  min-height: 0;
+}
+.portrait.portrait-photo img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+.portrait.portrait-photo b {
+  display: block;
+  text-align: center;
+  padding: 12px 14px;
+  border-top: 3px solid var(--ink);
+  background: var(--base);
+}
+.founder-quote {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--volt);
+  margin-bottom: 12px;
+}
