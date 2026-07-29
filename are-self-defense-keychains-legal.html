@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop All — Self-Defense Keychains &amp; Safety Accessories | Meli's Defense Boutique</title>
-<meta name="description" content="Shop the full lineup: self-defense keychain sets, kid-friendly keychains, kubatons, and accessories. Veteran woman owned, hand-packed in the USA.">
+<title>Are Self Defense Keychains Legal? | Meli's Defense Boutique</title>
+<meta name="description" content="A quick guide to the legality of kubatons, pepper spray, stun guns, and discreet knives across the United States — from veteran-owned Meli's Defense Boutique.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -46,27 +46,46 @@
     <a class="logo" href="index.html">MELI'S<span class="tick">★</span>DEFENSE<small>BOUTIQUE · EST. 2021</small></a>
     <nav class="main" aria-label="Main navigation">
       <a class="hot" href="shop.html">Shop All</a>
-      <a href="#self-defense">Self-Defense</a>
-      <a href="#kids">Kids</a>
-      <a href="#add-ons">Add-Ons</a>
-      <a href="#accessories">Accessories</a>
+      <a href="shop.html#self-defense">Self-Defense</a>
+      <a href="shop.html#kids">Kids</a>
+      <a href="shop.html#add-ons">Add-Ons</a>
+      <a href="shop.html#accessories">Accessories</a>
       <a href="index.html#melissa">Meet Melissa</a>
     </nav>
     <div class="head-icons">
-      <a href="#" aria-label="Search"><svg><use href="#i-search"/></svg></a>
+      <a href="shop.html" aria-label="Search"><svg><use href="#i-search"/></svg></a>
       <a href="https://melis-defense-boutique.myshopify.com/account" aria-label="Account"><svg><use href="#i-user"/></svg></a>
       <a href="#" class="cart-open" aria-label="Cart, 0 items"><svg><use href="#i-bag"/></svg> <span class="cart-count">(0)</span></a>
     </div>
   </div>
 </header>
 
-<main id="shop-main">
-  <div class="wrap center" style="padding-top: 40px;">
-    <p class="eyebrow">The whole lineup</p>
-    <h1 class="title" style="font-size: clamp(34px, 5vw, 56px);">Shop All</h1>
-    <p class="lede">Every tool and every cute thing, hand-picked and hand-packed by Melissa. Checkout runs on her secure Shopify store.</p>
+<main class="wrap article-page">
+  <div class="wrap crumbs" style="padding-left:0;"><a href="index.html">Home</a> / <span>Are Self Defense Keychains Legal</span></div>
+  <article class="article">
+    <p class="eyebrow">From Melissa's desk · February 19, 2024</p>
+    <h1 class="title">Are Self Defense Keychains Legal?</h1>
+    <img class="article-hero" src="img/blog-pink-keychain.jpg" alt="Pink self-defense keychain set">
+    <div class="article-body">
+      <p>In case people are wondering about certain defense items on keychains if there legal or illegal across the world. It is essential to check local laws for any restrictions. Stating this information by google confined into this blog for you.</p>
+      <ul>
+        <li><strong>Kubatons</strong> are legal in all 50 states, as they are considered non-lethal and are primarily used for self-defense purposes.</li>
+        <li><strong>Pepper Spray</strong> is legal in all 50 states and the District of Columbia. However, possession and/or use may be regulated or prohibited by law in some jurisdictions.</li>
+        <li><strong>Stun gun / Tasers</strong> are legal in all states except for Hawaii and Rhode Island. Special permission is required in Illinois, Indiana, Michigan, and Wisconsin (they require a license).</li>
+        <li><strong>Discreet Knives</strong> are a bit tricky — what I found was the shortest statewide restriction is 3 inches for the blade.</li>
+      </ul>
+      <p>Next I'll chat about having defense items, the rules and regulations when travelling by plane, going to an event or being out and about.</p>
+      <div class="legal-note">
+        <b>Also see</b><br>
+        Our <a href="policies.html#restrictions">state shipping restrictions</a> list exactly where we can and can't ship each type of tool. When in doubt about your state or campus,
+        <a href="mailto:melisdefenseboutique@gmail.com">ask Melissa before ordering</a>.
+      </div>
+    </div>
+  </article>
+
+  <div class="center" style="padding: 10px 0 50px;">
+    <a class="btn btn-pink" href="shop.html">Shop the lineup</a>
   </div>
-  <!-- category sections injected here -->
 </main>
 
 <!-- footer -->
@@ -78,10 +97,10 @@
     </div>
     <div>
       <h4>Shop</h4>
-      <a href="#self-defense">Self-Defense Keychains</a>
-      <a href="#kids">Kid Friendly</a>
-      <a href="#add-ons">Add-Ons</a>
-      <a href="#accessories">Accessories</a>
+      <a href="shop.html#self-defense">Self-Defense Keychains</a>
+      <a href="shop.html#kids">Kid Friendly</a>
+      <a href="shop.html#add-ons">Add-Ons</a>
+      <a href="shop.html#accessories">Accessories</a>
       <a href="p.html?h=gift-card">Gift Cards</a>
     </div>
     <div>
@@ -109,46 +128,6 @@
 <script src="catalog.js"></script>
 <script src="render.js"></script>
 <script src="cart.js"></script>
-<script>
-(function () {
-  var R = window.MDBRender;
-  var main = document.getElementById("shop-main");
-  var blurbs = {
-    "Self Defense Keychains": "Full keychain sets built to be carried — pick your colors.",
-    "Kid Friendly": "Cute-first sets sized for backpacks and little hands.",
-    "Add Ons": "Single tools to round out a set. Some have state restrictions — know your laws.",
-    "Accessories": "The cute stuff: wallets, clips, headbands, and gift cards.",
-  };
-  window.CATEGORY_ORDER.forEach(function (cat) {
-    var products = window.CATALOG.filter(function (p) { return p.category === cat; });
-    if (!products.length) return;
-    var section = document.createElement("section");
-    section.className = "block";
-    section.id = window.CATEGORY_SLUGS[cat];
-    var wrap = document.createElement("div");
-    wrap.className = "wrap";
-    var eyebrow = document.createElement("p");
-    eyebrow.className = "eyebrow";
-    eyebrow.textContent = products.length + (products.length === 1 ? " product" : " products");
-    var h2 = document.createElement("h2");
-    h2.className = "title";
-    h2.textContent = cat;
-    var lede = document.createElement("p");
-    lede.className = "lede";
-    lede.style.margin = "10px 0 0";
-    lede.textContent = blurbs[cat] || "";
-    var grid = document.createElement("div");
-    grid.className = "grid4";
-    products.forEach(function (p) { grid.appendChild(R.productCard(p)); });
-    wrap.appendChild(eyebrow);
-    wrap.appendChild(h2);
-    wrap.appendChild(lede);
-    wrap.appendChild(grid);
-    section.appendChild(wrap);
-    main.appendChild(section);
-  });
-})();
-</script>
 
 </body>
 </html>
