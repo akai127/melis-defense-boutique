@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meli's Defense Boutique</title>
+<meta name="description" content="Personal safety keychains and self-defense tools, hand-packed by a U.S. veteran.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- svg icon library -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 13H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  </defs>
+</svg>
+
+<!-- announcement bar -->
+<div class="announce" aria-label="Store announcements">
+  <div class="track">
+    <span>FREE US SHIPPING OVER <span class="volt">$100</span></span>
+    <span class="pinky">★</span>
+    <span>VETERAN WOMAN OWNED &amp; OPERATED</span>
+    <span class="pinky">★</span>
+    <span>PACKED BY MELISSA — SHIPS IN 24–48 HOURS</span>
+    <span class="pinky">★</span>
+    <span>HAND-PICKED TOOLS — <span class="volt">SHE'S GOT YOUR SIX</span></span>
+    <span class="pinky">★</span>
+    <span>FREE US SHIPPING OVER <span class="volt">$100</span></span>
+    <span class="pinky">★</span>
+    <span>VETERAN WOMAN OWNED &amp; OPERATED</span>
+    <span class="pinky">★</span>
+    <span>PACKED BY MELISSA — SHIPS IN 24–48 HOURS</span>
+  </div>
+</div>
+
+<!-- header -->
+<header class="site">
+  <div class="wrap masthead">
+    <a class="logo" href="index.html">MELI'S<span class="tick">★</span>DEFENSE<small>BOUTIQUE · EST. 2021</small></a>
+    <nav class="main" aria-label="Main navigation">
+      <a class="hot" href="shop.html">Shop All</a>
+      <a href="shop.html#self-defense">Self-Defense</a>
+      <a href="shop.html#kids">Kids</a>
+      <a href="shop.html#add-ons">Add-Ons</a>
+      <a href="shop.html#accessories">Accessories</a>
+      <a href="index.html#melissa">Meet Melissa</a>
+    </nav>
+    <div class="head-icons">
+      <a href="shop.html" aria-label="Search"><svg><use href="#i-search"/></svg></a>
+      <a href="https://www.melisdefenseboutique.com/account" aria-label="Account"><svg><use href="#i-user"/></svg></a>
+      <a href="#" class="cart-open" aria-label="Cart, 0 items"><svg><use href="#i-bag"/></svg> <span class="cart-count">(0)</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap crumbs"><a href="index.html">Home</a> / <a id="crumb-cat" href="shop.html">Shop</a> / <span id="crumb-title"></span></div>
+
+<!-- PDP -->
+<main class="wrap pdp">
+  <div class="gallery">
+    <div class="main-art art-photo" id="main-art">
+      <img id="main-img" alt="">
+    </div>
+    <div class="thumbs" id="thumbs"></div>
+  </div>
+
+  <div class="buybox">
+    <p class="eyebrow" id="p-category"></p>
+    <h1 id="p-title"></h1>
+    <div class="pprice"><span id="p-compare"></span><span id="p-price"></span> <small>· free US shipping over $100</small></div>
+
+    <div id="p-desc-short"></div>
+
+    <div id="p-options"></div>
+
+    <div class="atc-row">
+      <div class="qty" aria-label="Quantity">
+        <button aria-label="Decrease quantity" id="qty-minus">−</button>
+        <output id="qty-out">1</output>
+        <button aria-label="Increase quantity" id="qty-plus">+</button>
+      </div>
+      <button class="btn btn-pink" id="atc">Add to cart</button>
+    </div>
+
+    <ul class="ship-notes">
+      <li><b>Packed by Melissa</b> — hand-assembled and shipped in 24–48 hours</li>
+      <li><b>Checkout on melisdefenseboutique.com</b> — same secure store, same account</li>
+      <li><b>Know your laws</b> — some tools have state restrictions; ask before you order</li>
+    </ul>
+  </div>
+</main>
+
+<!-- full description -->
+<section class="wrap desc-grid">
+  <div>
+    <h3>The details</h3>
+    <div id="p-desc"></div>
+  </div>
+  <div>
+    <h3>Good to know</h3>
+    <table class="spec-table">
+      <tr><td>Ships</td><td>24–48h, packed by Melissa</td></tr>
+      <tr><td>Free shipping</td><td>US orders $100+</td></tr>
+      <tr><td>Checkout</td><td>Secure, on melisdefenseboutique.com</td></tr>
+      <tr><td>Questions</td><td><a href="https://www.melisdefenseboutique.com/pages/contact">Ask Melissa directly</a></td></tr>
+    </table>
+    <div class="legal-note">
+      <b>Legality note</b><br>
+      Self-defense tools can carry state and age restrictions. You are responsible for
+      knowing what's legal to carry where you live — when in doubt,
+      <a href="https://www.melisdefenseboutique.com/pages/contact">ask before ordering</a>.
+    </div>
+  </div>
+</section>
+
+<!-- cross-sell -->
+<section class="block" style="padding-top: 0;">
+  <div class="wrap">
+    <p class="eyebrow">Complete your set</p>
+    <h2 class="title">Goes great with</h2>
+    <div class="grid4" id="cross-sell"></div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="site">
+  <div class="wrap foot-grid">
+    <div>
+      <h4>Meli's Defense Boutique</h4>
+      <p>Cute, carry-anywhere safety gear, hand-packed by a U.S. veteran in Virginia. Every woman deserves to feel safe and empowered.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="shop.html#self-defense">Self-Defense Keychains</a>
+      <a href="shop.html#kids">Kid Friendly</a>
+      <a href="shop.html#add-ons">Add-Ons</a>
+      <a href="shop.html#accessories">Accessories</a>
+      <a href="p.html?h=gift-card">Gift Cards</a>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <a href="https://www.melisdefenseboutique.com/pages/contact">Contact Melissa</a>
+      <a href="https://www.melisdefenseboutique.com/pages/meet-the-maker">Meet the Maker</a>
+      <a href="https://www.melisdefenseboutique.com/account">Your Account</a>
+    </div>
+    <div>
+      <h4>The Fine Print</h4>
+      <a href="https://www.melisdefenseboutique.com/policies/privacy-policy">Privacy Policy</a>
+      <a href="https://www.melisdefenseboutique.com/policies/terms-of-service">Terms of Service</a>
+      <a href="https://www.melisdefenseboutique.com/policies/refund-policy">Refund Policy</a>
+    </div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© 2026 Meli's Defense Boutique · Virginia, USA</span>
+    <span>Some products have state shipping restrictions and are sold to adults 18+ only. Know your local laws.</span>
+  </div>
+</footer>
+
+<!-- sticky mobile add-to-cart -->
+<div class="sticky-atc">
+  <div><b id="sticky-title"></b><br><span style="font-size:12px;" id="sticky-price"></span></div>
+  <button class="btn btn-pink" id="sticky-atc-btn">Add to cart</button>
+</div>
+
+<script src="catalog.js"></script>
+<script src="render.js"></script>
+<script src="cart.js"></script>
+<script>
+(function () {
+  var R = window.MDBRender;
+  var params = new URLSearchParams(location.search);
+  var product = R.byHandle(params.get("h"));
+  if (!product) { location.replace("shop.html"); return; }
+
+  document.title = product.title + " | Meli's Defense Boutique";
+  document.getElementById("crumb-cat").textContent = product.category;
+  document.getElementById("crumb-cat").href = "shop.html#" + product.catSlug;
+  document.getElementById("crumb-title").textContent = product.title;
+  document.getElementById("p-category").textContent = product.category;
+  document.getElementById("p-title").textContent = product.title;
+  document.getElementById("sticky-title").textContent = product.title;
+
+  // description: first paragraph up top, the rest in "The details"
+  var shortEl = document.getElementById("p-desc-short");
+  var longEl = document.getElementById("p-desc");
+  if (product.desc.length) {
+    var p0 = document.createElement("p");
+    p0.textContent = product.desc[0];
+    shortEl.appendChild(p0);
+  }
+  (product.desc.length > 1 ? product.desc.slice(1) : product.desc).forEach(function (para) {
+    var p = document.createElement("p");
+    p.textContent = para;
+    longEl.appendChild(p);
+  });
+  if (!product.desc.length) {
+    var p = document.createElement("p");
+    p.textContent = "Hand-picked by Melissa for the lineup. Questions? Ask her directly — she answers.";
+    longEl.appendChild(p);
+  }
+
+  // gallery
+  var mainImg = document.getElementById("main-img");
+  var thumbs = document.getElementById("thumbs");
+  var currentImage = 0;
+  function showImage(i) {
+    currentImage = i;
+    mainImg.src = R.imgUrl(product.images[i], 1100);
+    mainImg.alt = product.title + " — photo " + (i + 1);
+    Array.prototype.forEach.call(thumbs.children, function (t, j) {
+      t.classList.toggle("active", j === i);
+    });
+  }
+  product.images.forEach(function (src, i) {
+    var t = document.createElement("button");
+    t.className = "thumb thumb-photo";
+    t.setAttribute("aria-label", "Photo " + (i + 1));
+    var im = document.createElement("img");
+    im.loading = "lazy";
+    im.src = R.imgUrl(src, 220);
+    im.alt = "";
+    t.appendChild(im);
+    t.addEventListener("click", function () { showImage(i); });
+    thumbs.appendChild(t);
+  });
+
+  // options + variant resolution
+  var selection = product.options.map(function (o) { return o.values[0]; });
+  var optsWrap = document.getElementById("p-options");
+  function currentVariant() {
+    for (var i = 0; i < product.variants.length; i++) {
+      var v = product.variants[i];
+      var match = true;
+      for (var j = 0; j < selection.length; j++) {
+        if (v.opts[j] !== selection[j]) { match = false; break; }
+      }
+      if (match) return v;
+    }
+    return null;
+  }
+  function renderOptions() {
+    optsWrap.innerHTML = "";
+    product.options.forEach(function (opt, i) {
+      var label = document.createElement("div");
+      label.className = "opt-label";
+      label.innerHTML = "";
+      label.appendChild(document.createTextNode(opt.name + " — "));
+      var em = document.createElement("em");
+      em.textContent = selection[i];
+      label.appendChild(em);
+      optsWrap.appendChild(label);
+      var group = document.createElement("div");
+      group.className = "opt-values";
+      group.setAttribute("role", "radiogroup");
+      group.setAttribute("aria-label", "Choose " + opt.name);
+      opt.values.forEach(function (val) {
+        var b = document.createElement("button");
+        b.className = "opt-chip" + (selection[i] === val ? " active" : "");
+        b.textContent = val;
+        b.addEventListener("click", function () {
+          selection[i] = val;
+          renderOptions();
+          updateBuyState();
+        });
+        group.appendChild(b);
+      });
+      optsWrap.appendChild(group);
+    });
+  }
+
+  var qty = 1;
+  var qtyOut = document.getElementById("qty-out");
+  document.getElementById("qty-minus").addEventListener("click", function () {
+    if (qty > 1) { qty--; qtyOut.textContent = qty; updateBuyState(); }
+  });
+  document.getElementById("qty-plus").addEventListener("click", function () {
+    qty++; qtyOut.textContent = qty; updateBuyState();
+  });
+
+  var atc = document.getElementById("atc");
+  var stickyAtc = document.getElementById("sticky-atc-btn");
+  function updateBuyState() {
+    var v = currentVariant();
+    var priceEl = document.getElementById("p-price");
+    var compareEl = document.getElementById("p-compare");
+    if (!v) {
+      priceEl.textContent = "$" + product.price.toFixed(2);
+      compareEl.textContent = "";
+      atc.textContent = "Unavailable";
+      atc.disabled = true;
+      stickyAtc.disabled = true;
+      return;
+    }
+    priceEl.textContent = "$" + v.price.toFixed(2);
+    compareEl.innerHTML = v.compare && v.compare > v.price
+      ? "<s>$" + v.compare.toFixed(2) + "</s> " : "";
+    document.getElementById("sticky-price").textContent =
+      "$" + v.price.toFixed(2) + (v.title !== "Default Title" ? " · " + v.title : "");
+    if (v.img != null) showImage(v.img);
+    if (!v.available) {
+      atc.textContent = "Sold out";
+      atc.disabled = true;
+      stickyAtc.disabled = true;
+    } else {
+      var total = v.price * qty;
+      atc.textContent = "Add to cart — $" + total.toFixed(2);
+      atc.disabled = false;
+      stickyAtc.disabled = false;
+    }
+  }
+  function addToCart() {
+    var v = currentVariant();
+    if (!v || !v.available) return;
+    window.MDBCart.add({
+      id: v.id,
+      qty: qty,
+      handle: product.handle,
+      title: product.title,
+      vtitle: v.title,
+      price: v.price,
+      img: R.imgUrl(product.images[v.img != null ? v.img : 0], 220),
+    });
+  }
+  atc.addEventListener("click", addToCart);
+  stickyAtc.addEventListener("click", addToCart);
+
+  // cross-sell: same category first, then the rest
+  var cross = window.CATALOG
+    .filter(function (p) { return p.handle !== product.handle; })
+    .sort(function (a, b) {
+      return (b.category === product.category) - (a.category === product.category);
+    })
+    .slice(0, 4);
+  var crossWrap = document.getElementById("cross-sell");
+  cross.forEach(function (p) { crossWrap.appendChild(R.productCard(p)); });
+
+  showImage(0);
+  renderOptions();
+  updateBuyState();
+})();
+</script>
+
+</body>
+</html>
