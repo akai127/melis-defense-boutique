@@ -57,7 +57,7 @@
       empty.appendChild(el("b", null, "Your bag is empty"));
       empty.appendChild(el("p", null, "Every keychain says “text me when you’re home.”"));
       var go = el("a", "btn btn-pink", "Shop the lineup");
-      go.href = "shop.html";
+      go.href = "/shop.html";
       empty.appendChild(go);
       body.appendChild(empty);
       return;

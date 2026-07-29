@@ -1,0 +1,42 @@
+name: Sync catalog from Shopify
+
+on:
+  schedule:
+    # 11:00 & 23:00 UTC = 7am/7pm EDT (6am/6pm EST in winter)
+    - cron: "0 11,23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-catalog
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync catalog and images
+        run: python sync_catalog.py
+
+      - name: Rebuild product pages, sitemap, merchant feed
+        run: python build_pages.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "catalog-sync-bot"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No catalog changes."
+          else
+            git commit -m "Auto-sync catalog from Shopify ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi

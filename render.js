@@ -1,8 +1,9 @@
 /* Shared render helpers — product cards built from window.CATALOG. */
 (function () {
   function imgUrl(src, width) {
-    // local repo images are pre-sized; only CDN URLs take a width param
-    if (src.indexOf("http") !== 0) return src;
+    // local repo images are pre-sized; only CDN URLs take a width param.
+    // Root-absolute path so it resolves from /products/ subpages too.
+    if (src.indexOf("http") !== 0) return "/" + src.replace(/^\//, "");
     return src + (src.indexOf("?") === -1 ? "?" : "&") + "width=" + width;
   }
 
@@ -18,7 +19,7 @@
   function productCard(p) {
     var a = document.createElement("a");
     a.className = "card";
-    a.href = "p.html?h=" + encodeURIComponent(p.handle);
+    a.href = "/products/" + encodeURIComponent(p.handle) + ".html";
     var flag = "";
     if (!p.available) flag = '<span class="flag">Sold out</span>';
     else if (p.compare && p.compare > p.price) flag = '<span class="flag">Sale</span>';
