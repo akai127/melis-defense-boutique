@@ -2,7 +2,7 @@
    Items live in localStorage; checkout hands the cart to Shopify via a
    cart permalink, so payment/shipping/taxes run on the existing store. */
 (function () {
-  var STORE = "https://www.melisdefenseboutique.com";
+  var STORE = "https://melis-defense-boutique.myshopify.com";
   var KEY = "mdb_cart";
   var FREE_SHIP = 100;
 
@@ -114,7 +114,7 @@
     var checkout = el("a", "btn btn-pink drawer-checkout", "Checkout");
     checkout.href = checkoutUrl(items);
     foot.appendChild(checkout);
-    foot.appendChild(el("p", "drawer-note", "Secure checkout on melisdefenseboutique.com"));
+    foot.appendChild(el("p", "drawer-note", "Secure Shopify checkout"));
   }
 
   function changeQty(id, delta) {
