@@ -108,14 +108,14 @@ CHROME_HEAD = """<!DOCTYPE html>
 
 <header class="site">
   <div class="wrap masthead">
-    <a class="logo" href="/index.html">MELI'S<span class="tick">&#9733;</span>DEFENSE<small>BOUTIQUE &middot; EST. 2021</small></a>
+    <a class="logo" href="/">MELI'S<span class="tick">&#9733;</span>DEFENSE<small>BOUTIQUE &middot; EST. 2021</small></a>
     <nav class="main" aria-label="Main navigation">
       <a class="hot" href="/shop.html">Shop All</a>
       <a href="/shop.html#self-defense">Self-Defense</a>
       <a href="/shop.html#kids">Kids</a>
       <a href="/shop.html#add-ons">Add-Ons</a>
       <a href="/shop.html#accessories">Accessories</a>
-      <a href="/index.html#melissa">Meet Melissa</a>
+      <a href="/#melissa">Meet Melissa</a>
     </nav>
     <div class="head-icons">
       <a href="/shop.html" aria-label="Search"><svg><use href="#i-search"/></svg></a>
@@ -144,7 +144,7 @@ CHROME_FOOT = """
     <div>
       <h4>Help</h4>
       <a href="mailto:melisdefenseboutique@gmail.com">Contact Melissa</a>
-      <a href="/index.html#melissa">Meet the Maker</a>
+      <a href="/#melissa">Meet the Maker</a>
       <a href="/are-self-defense-keychains-legal.html">Are They Legal?</a>
       <a href="https://melis-defense-boutique.myshopify.com/account">Your Account</a>
     </div>
@@ -183,7 +183,8 @@ def jsonld_for(p):
         "@context": "https://schema.org",
         "@type": "Product",
         "name": p["title"],
-        "description": " ".join(p["desc"])[:5000],
+        "description": " ".join(p["desc"])[:5000] or
+                       "Personal safety accessory from Meli's Defense Boutique, hand-packed by a U.S. veteran.",
         "image": [img_url(p, i) for i in range(len(p["images"]))][:10],
         "url": page_url(p),
         "brand": {"@type": "Brand", "name": "Meli's Defense Boutique"},
@@ -194,6 +195,22 @@ def jsonld_for(p):
             "highPrice": "%.2f" % p["priceMax"],
             "offerCount": len(p["variants"]),
             "availability": "https://schema.org/InStock" if p["available"] else "https://schema.org/OutOfStock",
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "US"},
+                "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {"@type": "QuantitativeValue", "minValue": 5, "maxValue": 7,
+                                     "unitCode": "DAY"},
+                    "transitTime": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 5,
+                                    "unitCode": "DAY"},
+                },
+            },
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "US",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+            },
         },
     }
     return json.dumps(data)
@@ -252,7 +269,7 @@ def render_product_page(p, catalog):
     )
 
     body = """
-<div class="wrap crumbs"><a href="/index.html">Home</a> / <a id="crumb-cat" href="/shop.html#{catslug}">{category}</a> / <span id="crumb-title">{title}</span></div>
+<div class="wrap crumbs"><a href="/">Home</a> / <a id="crumb-cat" href="/shop.html#{catslug}">{category}</a> / <span id="crumb-title">{title}</span></div>
 
 <main class="wrap pdp">
   <div class="gallery">
