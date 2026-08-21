@@ -49,7 +49,9 @@
   product.images.forEach(function (src, i) {
     var t = document.createElement("button");
     t.className = "thumb thumb-photo";
-    t.setAttribute("aria-label", "Photo " + (i + 1));
+    // the button carries the accessible name; the <img> inside stays alt=""
+    t.setAttribute("aria-label", "Show photo " + (i + 1) + " of " +
+      product.images.length + ", " + product.title);
     var im = document.createElement("img");
     im.loading = "lazy";
     im.src = R.imgUrl(src, 220);
